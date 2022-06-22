@@ -9,7 +9,7 @@ namespace ImpinjAssesment.Models
             Database.EnsureCreated();
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(@"Data Source=C:\Users\rskid\Downloads\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db");
+        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(@"Data Source=C:\path\to\database\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db");
 
         public DbSet<CountryDataUploadFile> CountryData { get; set; }
     }

@@ -31,7 +31,7 @@ namespace ImpinjAssesment.Services
 
         public async Task BulkUpload(List<CountryDataUploadFile> records)
         {
-            using (var conn = new SqliteConnection(@"Data Source=C:\Users\rskid\Downloads\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
+            using (var conn = new SqliteConnection(@"Data Source=C:\path\to\database\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
             {
                 conn.Open();
 
@@ -80,7 +80,7 @@ namespace ImpinjAssesment.Services
         {
             string MostCommonRegion = String.Empty;
 
-            using (var conn = new SqliteConnection(@"Data Source=C:\Users\rskid\Downloads\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
+            using (var conn = new SqliteConnection(@"Data Source=C:\path\to\database\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
             {
                 conn.Open();
 
@@ -118,7 +118,7 @@ namespace ImpinjAssesment.Services
         {
             List<string> MaxMinOrderDates = new List<string>();
 
-            using (var conn = new SqliteConnection(@"Data Source=C:\Users\rskid\Downloads\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
+            using (var conn = new SqliteConnection(@"Data Source=C:\path\to\database\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
             {
                 conn.Open();
 
@@ -153,7 +153,7 @@ namespace ImpinjAssesment.Services
         {
             double totalRevenue = 0;
 
-            using (var conn = new SqliteConnection(@"Data Source=C:\Users\rskid\Downloads\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
+            using (var conn = new SqliteConnection(@"Data Source=C:\path\to\database\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
             {
                 conn.Open();
 
@@ -175,7 +175,7 @@ namespace ImpinjAssesment.Services
         {
             double unitCostMedian = 0;
 
-            using (var conn = new SqliteConnection(@"Data Source=C:\Users\rskid\Downloads\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
+            using (var conn = new SqliteConnection(@"Data Source=C:\path\to\database\ImpinjAssessment\ImpinjAssesment\Database\CountryData.db"))
             {
                 conn.Open();
 
