@@ -64,20 +64,20 @@ namespace ImpinjAssesment.Controllers
 
         [HttpPost]
         [Route("upload")]
-        public async Task<IActionResult> Upload([FromForm] IFormFile file)
+        public async Task<IActionResult> Upload([FromForm] IFormFile uploadFile)
         {
             List<CountryDataUploadFile> records = new List<CountryDataUploadFile>();
 
-            if (file != null)
+            if (uploadFile != null)
             {
-                if (!file.FileName.Contains(".csv"))
+                if (!uploadFile.FileName.Contains(".csv"))
                 {
                     throw new Exception("File is not valid CSV");
                 }
                 else
                 {
-                    using var memoryStream = new MemoryStream(new byte[file.Length]);
-                    await file.CopyToAsync(memoryStream);
+                    using var memoryStream = new MemoryStream(new byte[uploadFile.Length]);
+                    await uploadFile.CopyToAsync(memoryStream);
                     memoryStream.Position = 0;
 
                     using (var reader = new StreamReader(memoryStream))
